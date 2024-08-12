@@ -53,7 +53,7 @@ window.addEventListener('DOMContentLoaded', () => {
   })
 })
 selected.addEventListener('change', (e) => {
-  custem_per_page = e.target.value
+  custem_per_page = +e.target.value
   current_page = 1
   displayWindow()
   setStoragePage()
@@ -80,6 +80,8 @@ function displayWindow() {
   let start_index = (current_page - 1) * custem_per_page
   let end_index = start_index + custem_per_page
   page = userDate.slice(start_index, end_index)
+  console.log(end_index);
+
   page.filter(item => {
     if (item.first_name.toLowerCase().includes(searchValue)) {
       return item
