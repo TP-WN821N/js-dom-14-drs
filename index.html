@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ToDo List</title>
+</head>
+
+<body>
+  <div class="w-[60%] mx-auto pt-8 flex flex-col gap-5">
+    <div class="flex items-center justify-between">
+      <input id="serach-input" type="text" placeholder="Search..." class="border text-lg py-1 px-2 outline-none ">
+      <select id="selected" class="w-16 border outline-none text-lg py-1 px-2">
+        <option value="1">1</option>
+        <option selected value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+      </select>
+      <button id="add-task" class="bg-blue-600 py-2 text-xl text-white px-8 rounded ">Add user</button>
+    </div>
+    <div>
+      <table class="w-full">
+        <thead>
+          <tr>
+            <th class="border">T/H</th>
+            <th class="border">First name</th>
+            <th class="border">Last name</th>
+            <th class="border">Phone number</th>
+            <th class="border">Age</th>
+            <th class="border">Email</th>
+            <th class="border">Action</th>
+          </tr>
+        </thead>
+        <tbody id="tbody">
+
+        </tbody>
+      </table>
+    </div>
+    <div id="pagination" class="flex gap-1"></div>
+  </div>
+
+  <div id="madal"
+    class="fixed w-full h-full bg-[#eee] hidden items-center justify-center top-0 left-0 bg-opacity-60 z-10">
+    <div class="w-1/3 bg-gray-200 rounded-lg p-6 pb-3">
+      <form id="input-form" class="flex flex-col gap-1">
+        <input class="border w-full focus:border-blue-600 outline-none px-2 py-2" type="text" placeholder="First name"
+          name="first_name" onkeyup="heandleChange(event)">
+        <input class="border w-full focus:border-blue-600 outline-none px-2 py-2" type="text" placeholder="Last name"
+          name="last_name" onkeyup="heandleChange(event)">
+        <input class="border w-full focus:border-blue-600 outline-none px-2 py-2" type="text" placeholder="Phone number"
+          name="phone_number" onkeyup="heandleChange(event)">
+        <input class="border w-full focus:border-blue-600 outline-none px-2 py-2" type="text" placeholder="Age"
+          name="age" onkeyup="heandleChange(event)">
+        <input class="border w-full focus:border-blue-600 outline-none px-2 py-2" type="text" placeholder="Email"
+          name="email" onkeyup="heandleChange(event)">
+        <div class="flex gap-3 pt-3">
+          <button type="submit" id="save-btn" class="bg-blue-600 py-1 text-white px-5">Save</button>
+          <button id="close-btn" class="bg-red-600 py-1 text-white px-5">Cloue</button>
+          <button id="remove-btn" class="bg-green-600 py-1 text-white px-5">Remove</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="./app.js"></script>
+</body>
+
+</html>
